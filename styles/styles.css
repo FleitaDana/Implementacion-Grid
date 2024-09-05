@@ -1,0 +1,113 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header menu menu menu"
+        "hero hero hero hero"
+        "main main libre image"
+        "main main libre extra"
+        "banner banner banner banner";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 5fr 2fr 2fr 1fr;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+}
+
+.hero {
+    grid-area: hero;
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    align-items: center;
+}
+
+.libre{
+    grid-area: libre;
+    background-color: #ffffff;
+    color: white;
+    padding: 10px;
+}
+
+.extra {
+    grid-area: extra;
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px;
+}
+
+.image {
+    grid-area: image;
+    background-color: #a5d8dc;
+    color: white;
+    padding: 10px;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: #f1c40f;
+    color: white;
+    padding: 10px;
+}
+
+/* Media Query para Tablet */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-areas:
+            "header header header header"
+            "hero hero hero hero"
+            "menu main main main"
+            "menu banner banner banner"
+            "menu extra  extra  image";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
+        height: auto;
+        
+        height: 100vh;
+    }
+}
+
+/* Media Query para Mobile */
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "menu"
+            "hero"
+            "main"
+            "banner"
+            "extra"
+            "image";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 3fr 3fr 2fr 2fr 2fr;
+        height: auto;
+
+        height: 100vh;
+    }
+}
